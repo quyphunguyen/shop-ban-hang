@@ -14,6 +14,11 @@ const routes: Routes = [
         pathMatch: 'full',
       },
       {
+        path: 'cuaHang',
+        loadChildren: () =>
+          import('./pages/pages.module').then((m) => m.PagesModule),
+      },
+      {
         path: 'dashboard',
         loadChildren: () =>
           import('./pages/pages.module').then((m) => m.PagesModule),

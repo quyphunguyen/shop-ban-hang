@@ -10,6 +10,11 @@ export const navItems: NavItem[] = [
     route: '/dashboard',
   },
   {
+    displayName: 'Cửa Hàng',
+    iconName: 'layout-dashboard',
+    route: '/cuaHang',
+  },
+  {
     navCap: 'Ui Components',
   },
   {
