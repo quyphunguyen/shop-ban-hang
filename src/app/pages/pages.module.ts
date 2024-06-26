@@ -10,9 +10,10 @@ import { TablerIconsModule } from 'angular-tabler-icons';
 import * as TablerIcons from 'angular-tabler-icons/icons';
 import { AppDashboardComponent } from './dashboard/dashboard.component';
 import {CuaHangComponent} from './cuaHang/cuaHang.component';
+import {ShopingComponent} from "./shoping/shoping.component";
 
 @NgModule({
-  declarations: [AppDashboardComponent, CuaHangComponent],
+  declarations: [AppDashboardComponent, CuaHangComponent,ShopingComponent],
   imports: [
     CommonModule,
     MaterialModule,

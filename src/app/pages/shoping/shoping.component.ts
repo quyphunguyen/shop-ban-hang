@@ -126,11 +126,10 @@ const ELEMENT_DATA: productsData[] = [
 ];
 
 @Component({
-  selector: 'app-cuaHang',
-  templateUrl: './cuaHang.component.html',
-  encapsulation: ViewEncapsulation.None,
+  selector: 'shoping',
+  templateUrl: './shoping.component.html'
 })
-export class CuaHangComponent {
+export class ShopingComponent {
   @ViewChild('chart') chart: ChartComponent = Object.create(null);
 
   public salesOverviewChart!: Partial<salesOverviewChart> | any;
