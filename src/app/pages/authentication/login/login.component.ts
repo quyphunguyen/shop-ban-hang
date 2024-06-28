@@ -18,6 +18,7 @@ export class AppSideLoginComponent {
   onSubmit(): void {
     this.getUserById();
   }
+
   async getUserById() {
     this.productService.getUser(this.formUser.value).subscribe(value => {
       if (value){
