@@ -16,19 +16,11 @@ export class ShopingComponent  implements OnInit{
   }
 
   async tracuuDanhmuc() {
-    try {
-
-      let response = <any>(
-        await this.productService.getPosts()
-      );
-      if (response) {
-        console.log(response)
-      } else {
-        console.log('lỗi')
+    this.productService.getPosts().subscribe(value => {
+      if (value){
+        this.datas = value[0].id
       }
-    } catch (err) {
-      console.log('lỗi1')
-    }
+    })
   }
 
 }
