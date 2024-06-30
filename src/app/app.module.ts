@@ -23,6 +23,8 @@ import { SidebarComponent } from './layouts/full/sidebar/sidebar.component';
 import { HeaderComponent } from './layouts/full/header/header.component';
 import { BrandingComponent } from './layouts/full/sidebar/branding.component';
 import { AppNavItemComponent } from './layouts/full/sidebar/nav-item/nav-item.component';
+import {NotificationService} from "./notification/notification.service";
+import {NotificationListComponent} from "./notification/notification.component";
 
 @NgModule({
   declarations: [
@@ -33,6 +35,7 @@ import { AppNavItemComponent } from './layouts/full/sidebar/nav-item/nav-item.co
     HeaderComponent,
     BrandingComponent,
     AppNavItemComponent,
+    NotificationListComponent
   ],
   imports: [
     BrowserModule,
@@ -46,5 +49,6 @@ import { AppNavItemComponent } from './layouts/full/sidebar/nav-item/nav-item.co
   ],
   exports: [TablerIconsModule],
   bootstrap: [AppComponent],
+  providers: [NotificationService]
 })
 export class AppModule {}
