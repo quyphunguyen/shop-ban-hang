@@ -12,7 +12,12 @@ export const navItems: NavItem[] = [
   {
     displayName: 'Cửa Hàng',
     iconName: 'layout-dashboard',
-    route: '/cuaHang',
+    route: '/dashboard/cuaHang',
+  },
+  {
+    displayName: 'shoping',
+    iconName: 'layout-dashboard',
+    route: '/dashboard/shoping',
   },
   {
     navCap: 'Ui Components',

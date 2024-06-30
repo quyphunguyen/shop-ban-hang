@@ -123,15 +123,6 @@ const ELEMENT_DATA: productsData[] = [
     budget: 2.4,
     priority: 'critical',
   },
-  {
-    id: 4,
-    imagePath: 'assets/images/profile/user-4.jpg',
-    uname: 'Nirav Joshi',
-    position: 'Frontend Engineer',
-    productName: 'Hosting Press HTML',
-    budget: 2.4,
-    priority: 'critical',
-  },
 ];
 
 @Component({
