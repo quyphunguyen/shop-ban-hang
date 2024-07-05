@@ -24,6 +24,7 @@ export class AppSideLoginComponent {
   async getUserById() {
     this.productService.getUser(this.formUser.value).subscribe(value => {
       if (value){
+        sessionStorage.setItem('user', JSON.stringify(value));
         this.sendSuccess();
         this.router.navigate(['/']);
       }else{

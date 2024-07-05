@@ -3,7 +3,7 @@
     <mat-card class="cardWithShadow productcard overflow-hidden">
       <a routerLink="/widgets/cards">
         <img
-          src="{{ productcard.imgSrc }}"
+          src="{{environment.apiImg+productcard.fileName }}"
           alt="imgSrc"
           class="w-100"
           mat-card-image
@@ -50,3 +50,4 @@
     </mat-card>
   </div>
 </div>
+

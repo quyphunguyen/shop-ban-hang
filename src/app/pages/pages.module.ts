@@ -11,6 +11,7 @@ import * as TablerIcons from 'angular-tabler-icons/icons';
 import { AppDashboardComponent } from './dashboard/dashboard.component';
 import {CuaHangComponent} from './cuaHang/cuaHang.component';
 import {ShopingComponent} from "./shoping/shoping.component";
+import {AppProfileComponent} from "./authentication/profile/profile.component";
 
 @NgModule({
   declarations: [AppDashboardComponent, CuaHangComponent,ShopingComponent],

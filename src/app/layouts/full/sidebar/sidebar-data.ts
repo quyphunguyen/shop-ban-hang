@@ -20,6 +20,16 @@ export const navItems: NavItem[] = [
     route: '/dashboard/shoping',
   },
   {
+    displayName: 'Thêm mới sản phẩm',
+    iconName: 'layout-dashboard',
+    route: '/admin/addProduct',
+  },
+  {
+    displayName: 'Danh sách sản phẩm',
+    iconName: 'layout-dashboard',
+    route: '/admin/list',
+  },
+  {
     navCap: 'Ui Components',
   },
   {

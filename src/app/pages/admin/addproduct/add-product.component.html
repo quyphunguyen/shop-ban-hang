@@ -1,0 +1,71 @@
+<mat-card class="cardWithShadow theme-card">
+  <mat-card-header>
+    <mat-card-title class="m-b-0">Thêm mới sản phẩm</mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="b-t-1">
+    <form class="m-t-30" [formGroup]="form">
+      <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block"
+      >Ảnh sản phẩm</mat-label
+      >
+      <mat-card appearance="outlined">
+        <mat-card-content>
+          <img [src]="base64File" height="200">
+        </mat-card-content>
+      </mat-card>
+      <mat-form-field floatPlaceholder="never">
+
+        <input [hidden]="true" (change)="onFileSelect($event)" type="file" accept="image/*" #fileSelect>
+        <input readonly matInput formControlName="fileName" placeholder="Select file..."/>
+        <button *ngIf="this.base64File" (click)="deleteFile()" matSuffix matTooltip="Remove selected file"
+                [matTooltipPosition]="'above'" type="button" color="warn" mat-icon-button>
+          <mat-icon>close</mat-icon>
+        </button>
+        <button matSuffix mat-icon-button (click)="fileSelect.click();"  matTooltip="Chọn file" [matTooltipPosition]="'above'">
+          <mat-icon>file_upload</mat-icon>
+        </button>
+      </mat-form-field>
+      <span *ngIf="this.base64File">Loading ... {{percentDone}}</span>
+
+      <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block"
+      >Tên sản phẩm</mat-label
+      >
+      <mat-form-field appearance="outline" class="w-100" color="primary">
+        <input matInput formControlName="title"/>
+        <mat-error *ngIf="form.get('title')?.hasError('required')">
+          Tên sản phẩm không được để trống!
+        </mat-error>
+      </mat-form-field>
+      <!-- password -->
+      <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block"
+      >Giá mới</mat-label
+      >
+      <mat-form-field appearance="outline" class="w-100" color="primary">
+        <input matInput  formControlName="price"/>
+        <mat-error *ngIf="form.get('price')?.hasError('required')">
+          Giá mới không được để trống!
+        </mat-error>
+      </mat-form-field>
+
+      <!-- password -->
+      <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block"
+      >Giá cũ</mat-label
+      >
+      <mat-form-field appearance="outline" class="w-100" color="primary">
+        <input matInput  formControlName="rprice"/>
+        <mat-error *ngIf="form.get('rprice')?.hasError('required')">
+          Giá cũ không được để trống!
+        </mat-error>
+      </mat-form-field>
+
+      <mat-grid-list cols="3" rowHeight="3:1">
+        <mat-grid-tile><a mat-flat-button color="primary" class="w-100" (click)="save()">Thêm mới</a></mat-grid-tile>
+        <mat-grid-tile><a mat-flat-button color="primary" class="w-100" (click)="clearData()">clear dữ liệu</a></mat-grid-tile>
+        <mat-grid-tile><a mat-flat-button color="primary" class="w-100" (click)="delete()">Xóa</a></mat-grid-tile>
+
+      </mat-grid-list>
+
+
+      <!-- input -->
+    </form>
+  </mat-card-content>
+</mat-card>

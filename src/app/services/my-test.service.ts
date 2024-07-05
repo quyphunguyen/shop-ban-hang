@@ -14,8 +14,8 @@ export class MyTestService {
 
   constructor(private httpClient: HttpClient) {}
 
-  getPosts(): Observable<any> {
-    return this.httpClient.get<any>(environment.apiHost + '/list').pipe();
+  getFindAll(): Observable<any> {
+    return this.httpClient.get<any>(environment.apiHost + '/product/findAll').pipe();
   }
 
   getUser(user:any): Observable<any> {

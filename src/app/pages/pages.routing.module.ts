@@ -1,12 +1,8 @@
-import { Routes } from '@angular/router';
-import { AppDashboardComponent } from './dashboard/dashboard.component';
+import {Routes} from '@angular/router';
+import {AppDashboardComponent} from './dashboard/dashboard.component';
 import {CuaHangComponent} from "./cuaHang/cuaHang.component";
-import {AppBadgeComponent} from "./ui-components/badge/badge.component";
-import {AppChipsComponent} from "./ui-components/chips/chips.component";
-import {AppListsComponent} from "./ui-components/lists/lists.component";
-import {AppMenuComponent} from "./ui-components/menu/menu.component";
-import {AppTooltipsComponent} from "./ui-components/tooltips/tooltips.component";
 import {ShopingComponent} from "./shoping/shoping.component";
+import {AppProfileComponent} from "./authentication/profile/profile.component";
 
 export const PagesRoutes: Routes = [
   {
@@ -23,7 +19,13 @@ export const PagesRoutes: Routes = [
       {
         path: 'shoping',
         component: ShopingComponent,
-      }
+      },
+      {
+        path: 'user/info',
+        component: AppProfileComponent,
+      },
+
+
     ],
   }
 ];
